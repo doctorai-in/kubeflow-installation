@@ -1,0 +1,19 @@
+# Get Ip and port to access kubflow Dashboard
+export INGRESS_HOST=$(minikube ip)
+export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].nodePort}')
+http://$INGRESS_HOST:$INGRESS_PORT
+
+# To Know Running pod For Kubeflow
+kubectl get pod -n kubeflow
+kubectl -n kubeflow get all
+
+# TO Describe all pod 
+kubectl -n kubeflow describe pod
+
+kfctl delete -f ${CONFIG_FILE}
+
+# To get pod Describtion
+kubectl -n kubeflow describe pod podname
+
+# Create Namespace
+kubectl create ns namespacename
