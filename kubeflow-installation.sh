@@ -28,7 +28,7 @@ echo ".....Deleting Existing kubernetes Cluster....."
 sudo minikube delete
 echo ".....Starting kubernetes clusters....."
 sudo minikube start --vm-driver=none --cpus 6 --memory 12288 --disk-size=120g --extra-config=apiserver.authorization-mode=RBAC --extra-config=kubelet.resolv-conf=/run/systemd/resolve/resolv.conf --extra-config kubeadm.ignore-preflight-errors=SystemVerification
-sudo mv /home/omen/.kube /home/omen/.minikube $HOME
+sudo mv $HOME/.kube $HOME/.minikube $HOME
 sudo chown -R $USER $HOME/.kube $HOME/.minikube
 sudo kubectl create ns kubeflow-anonymous
 # Installing Kubeflow
