@@ -79,8 +79,8 @@ export PATH=$PATH:${kubeflow}
 export KFAPP=kfapp
 export CONFIG=${kubeflow}/kfctl_k8s_istio.0.6.2.yaml
 
-sudo kfctl init ${KFAPP} --config=${CONFIG} -V
+kfctl init ${KFAPP} --config=${CONFIG} -V
 
 cd ${KFAPP}
-sudo kfctl generate all -V        
-sudo kfctl apply all -V
+kfctl generate all -V        
+kfctl apply all -V
