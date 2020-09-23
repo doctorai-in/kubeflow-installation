@@ -9,9 +9,9 @@ metadata:
 spec:
   repos:
     - name: manifests
-      uri: file:///home/omen/kubeflow/manifests-56e2fb15db286198f7a53723cb1fbfecf3fe83fb/
+      uri: file:///home/kubeflow/manifests-56e2fb15db286198f7a53723cb1fbfecf3fe83fb/
     - name: kubeflow
-      uri: file:///home/omen/kubeflow/kubeflow-0dbd2550372c003ba69069aeee283bd59fb1341f/
+      uri: file:///home/kubeflow/kubeflow-0dbd2550372c003ba69069aeee283bd59fb1341f/
   applications:
     # Istio install. If not needed, comment out istio-crds and istio-install.
     - kustomizeConfig:
